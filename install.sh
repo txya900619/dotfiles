@@ -50,7 +50,8 @@ applynvim() {
 		# echo "nvim is not installed."
 		# return $(false)
 		mkdir -p $HOME/.local/bin
-		curl -fsSL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz | tar zxf - --strip-components 2 -C $HOME/.local/bin nvim-linux64/bin/nvim
+		curl -fsSL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz | tar zxf - -C $HOME
+		ln -s $HOME/nvim-linux64/bin/nvim $HOME/.local/bin/nvim
 	fi
 
 	# install AstroNvim
@@ -58,7 +59,6 @@ applynvim() {
 	git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 	# remove template's git connection to set up your own later
 	rm -rf ~/.config/nvim/.git
-	nvim
 }
 
 applyzellij() {
