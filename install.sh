@@ -113,7 +113,7 @@ applygitcz() {
 		return $(false)
 	fi
 
-	npm install -g commitizen
+	npm install -g git-cz
 }
 
 applyuv() {
