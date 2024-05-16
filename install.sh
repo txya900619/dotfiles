@@ -71,7 +71,7 @@ applyzellij() {
 }
 
 applynvm() {
-	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | zsh
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 	export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 	nvm install --lts
@@ -144,11 +144,6 @@ main() {
 	# Apply the config of zsh
 	if askquestion "Do you want to apply the config of zsh?"; then
 		applyzsh
-	fi
-
-	# Apply the config of vim
-	if askquestion "Do you want to apply the config of vim?"; then
-		applyvim
 	fi
 
 	# Apply the config of neovim
