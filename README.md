@@ -13,9 +13,9 @@ My shell configuration files.
 
     ```sh
     # Install by `curl`
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/txya9000619/dotfiles/master/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/txya900619/dotfiles/main/install.sh)"
 
     # Install by `wget`
-    sh -c "$(wget -O- https://raw.githubusercontent.com/txya900619/dotfiles/master/install.sh)"
+    sh -c "$(wget -O- https://raw.githubusercontent.com/txya900619/dotfiles/main/install.sh)"
     ```
 3. Use nerd fonts
