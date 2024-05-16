@@ -64,11 +64,12 @@ applynvim() {
 applyzellij() {
 	# Check tmux
 	if ! command -v zellij >/dev/null 2>&1; then
-
 		mkdir -p $HOME/.local/bin
 		curl -fsSL https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz | tar zxf - -C $HOME/.local/bin
-
 	fi
+
+	mkdir -p $HOME/.config/zellij/layouts
+	cp $INSTALL_DIRECTORY/zellij/layouts/* $HOME/.config/zellij/layouts
 }
 
 applynvm() {
