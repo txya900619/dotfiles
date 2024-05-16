@@ -58,6 +58,7 @@ applynvim() {
 	git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 	# remove template's git connection to set up your own later
 	rm -rf ~/.config/nvim/.git
+	nvim
 }
 
 applyzellij() {
@@ -96,7 +97,7 @@ applyeza() {
 	fi
 
 	curl https://raw.githubusercontent.com/eza-community/eza/main/completions/zsh/_eza -o $INSTALL_DIRECTORY/zsh/eza_completion
-	echo "export FPATH=$INSTALL_DIRECTORY/zsh/eza_completion:$FPATH" >>~/.zshrc
+	echo "export FPATH=$INSTALL_DIRECTORY/zsh/eza_completion:\$FPATH" >>~/.zshrc
 }
 
 applyzoxide() {
