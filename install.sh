@@ -4,7 +4,7 @@ REPO_URL="https://github.com/txya900619/dotfiles"
 REPO_NAME="dotfiles"
 
 INSTALL_DIRECTORY=${INSTALL_DIRECTORY:-"$HOME/.$REPO_NAME"}
-INSTALL_VERSION=${INSTALL_VERSION:-"master"}
+INSTALL_VERSION=${INSTALL_VERSION:-"main"}
 
 askquestion() {
 	printf "$1 [y/N] "
@@ -12,10 +12,10 @@ askquestion() {
 	read ans
 	case $ans in
 	[Yy*])
-		return $(true)
+		return 0
 		;;
 	*)
-		return $(false)
+		return 1
 		;;
 	esac
 }
