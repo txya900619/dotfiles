@@ -9,3 +9,5 @@ alias cd="z"
 # bat
 alias cat="bat"
 
+alias zelw="zellij -l welcome"
+
