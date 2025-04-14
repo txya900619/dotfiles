@@ -51,7 +51,7 @@ applynvim() {
 		# return $(false)
 		mkdir -p $HOME/.local/bin
 		curl -fsSL https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz | tar zxf - -C $HOME
-		ln -s $HOME/nvim-linux64/bin/nvim $HOME/.local/bin/nvim
+		ln -s $HOME/nvim-linux-x86_64/bin/nvim $HOME/.local/bin/nvim
 	fi
 
 	# install AstroNvim
